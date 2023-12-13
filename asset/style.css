@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: #ccc;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    margin: auto;
+    justify-content: space-between;
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.25s;
+}
+.image{
+    margin: 20px 0;
+    width: 22%;
+    height: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.image:hover img{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+i {
+    transition: 0.25s;
+}
+i:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.gallery{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0 ,0 , 0.6);
+    display: flex;
+    align-items: center;    
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.8);
+    transition: 0.5s;
+}
+.gallery__inner{
+    margin: 0 auto;
+    width: 500px;
+    height: 600px;
+    
+}
+.icon{
+    font-size: 35px;
+    position: fixed;
+    top: 15px;
+    right: 25px;
+    color: rgba(255, 255, 255, 0.8);
+
+}
+.control_prev, .control_next{
+    position: fixed;
+    font-size: 62px;
+    top: 45%;
+    color: rgba(255, 255, 255, 0.8);
+
+}
+.control_prev{
+    left: 20px;
+}
+.control_next{
+    right: 20px;
+}
+.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+.hide{
+    display: none;
+}
